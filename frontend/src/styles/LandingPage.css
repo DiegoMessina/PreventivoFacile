@@ -1,0 +1,91 @@
+html, body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(120deg, #e4d8fa 0%, #b5f0ff 100%);
+}
+
+.loginPage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;       /* centra verticalmente */
+    justify-content: center;   /* centra orizzontalmente */
+    height: 100vh;             /* prende tutto lo schermo */
+    gap: 50px;                 /* spazio tra icona e testo */
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+/* Colonna sinistra (SVG) */
+.svg {
+    flex: 1;                   /* prende spazio proporzionato */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prev-svg {
+    width: 60%;
+    max-width: 350px;
+    height: auto;
+}
+
+/* Colonna destra (Testo + bottoni) */
+.landingText {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landingText h1 {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 3.5em;
+}
+
+.landingText h1 span {
+    font-weight: bolder;
+}
+
+.landingText p {
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.buttonsLandingDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.BtnLanding {
+    min-height: 50px;
+}
+
+/* Media query per mobile */
+@media (max-width: 768px) {
+    .loginPage {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .svg {
+        margin-bottom: 30px;
+    }
+
+    #prev-svg {
+        width: 40%;
+        max-width: 200px;
+    }
+
+    .landingText {
+        margin: 0;
+        max-width: 90%;
+    }
+}

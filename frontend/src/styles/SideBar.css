@@ -1,0 +1,169 @@
+/* ==============================
+   BASE SIDEBAR
+   ============================== */
+.sidebar {
+    position: relative;
+    height: 100vh;
+    background: #e3e6f0;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    border: none;
+}
+
+/* Larghezze sidebar */
+.sidebar.open {
+    width: 220px;
+}
+
+.sidebar.closed {
+    width: 60px;
+}
+
+/* ==============================
+   TOGGLE BUTTON
+   ============================== */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    width: 40px;        /* larghezza fissa icona */
+    height: 40px;       /* altezza fissa icona */
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.3s ease, right 0.3s ease, left 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar.open .toggle-btn {
+    right: 10px;
+    left: auto;         /* disabilita il centraggio */
+}
+
+.sidebar.closed .toggle-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;        /* disabilita l'allineamento a destra */
+}
+
+.toggle-btn:hover {
+    color: #ffc107;
+}
+
+/* ==============================
+   NAV-LINK BASE
+   ============================== */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    width: 100%;
+    transition: background 0.2s, font-weight 0.2s;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Icone di base */
+.nav-link svg {
+    font-size: 1.3rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover su icone */
+.nav-link:hover svg {
+    transform: scale(1.2);
+    color: #ffc107;
+}
+
+/* ==============================
+   LOGOUT LINK BASE
+   ============================== */
+.logout-link {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    margin-top: auto; /* spinge logout in fondo */
+    transition: font-weight 0.2s ease;
+    border-top: 1px solid rgba(0,0,0,0.1); /* separatore sopra logout */
+}
+
+.logout-link:hover {
+    font-weight: bold;
+}
+
+.logout-link svg {
+    font-size: 1.4rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logout-link:hover svg {
+    transform: scale(1.2);
+    color: #ffc107;
+
+}
+
+/* ==============================
+   STATO APERTO (icone a destra)
+   ============================== */
+.sidebar.open .nav-link {
+    min-width: 220px;
+    justify-content: space-between;
+}
+
+
+.sidebar.open .nav-link svg {
+    margin-left: auto; /* spinge icona a destra */
+    margin-right: 0;
+}
+
+.sidebar.open .logout-link {
+    min-width: 220px;
+    justify-content: space-between;
+}
+
+.sidebar.open .logout-link svg {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* ==============================
+   STATO CHIUSO (icone centrate)
+   ============================== */
+
+.closed .nav-link .SideBarToggle{
+    min-width: 59px;
+    min-height: 50px;
+    padding: 15px 20px;
+}
+.sidebar.closed .nav-link {
+    justify-content: center;
+}
+
+.sidebar.closed .nav-link svg {
+    margin-right: 0;
+}
+
+.sidebar.closed .logout-link {
+    justify-content: center;
+}
+
+.sidebar.closed .logout-link svg {
+    margin-right: 0;
+}

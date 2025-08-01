@@ -1,0 +1,21 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+        width="250"
+        height="250"
+        fill="none"
+        stroke="#ffc107"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+>
+    <!-- Testa utente -->
+    <circle cx="32" cy="20" r="10" />
+
+    <!-- Corpo utente -->
+    <path d="M20 52c0-8 6-14 12-14s12 6 12 14" />
+
+    <!-- Freccia login -->
+    <line x1="44" y1="32" x2="58" y2="32" />
+    <polyline points="52,26 58,32 52,38" />
+</svg>

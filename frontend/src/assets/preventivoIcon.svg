@@ -1,0 +1,27 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+        width="250"
+        height="250"
+        fill="none"
+        stroke="#ffc107"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+>
+  <!-- Documento -->
+  <rect x="8" y="4" width="40" height="56" rx="2" ry="2" fill="none" stroke="#ffc107"/>
+  <path d="M48 4v14h12" stroke="#ffc107" fill="none"/>
+
+  <!-- Linee testo -->
+  <line x1="14" y1="22" x2="38" y2="22"/>
+  <line x1="14" y1="28" x2="38" y2="28"/>
+  <line x1="14" y1="34" x2="38" y2="34"/>
+
+  <!-- Simbolo preventivo -->
+  <text x="14" y="18" font-size="6" fill="#ffc107" font-weight="bold">€</text>
+
+  <!-- Matita -->
+  <path d="M20 44 L44 20 L52 28 L28 52 L20 52 Z" fill="none" stroke="#ffc107"/>
+  <path d="M44 20 L48 24" stroke="#ffc107"/>
+</svg>
